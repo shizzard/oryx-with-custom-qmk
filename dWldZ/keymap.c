@@ -16,25 +16,14 @@ enum custom_keycodes {
 #define KC_DFN2 LT(2, KC_T)
 #define KC_DFN3 LT(15, KC_L)
 
-// Shortened keycode aliases (KC_xxxx format with exactly 4 symbols)
+// Custom keycode aliases
 #define KC_AVLD KC_VOLD
 #define KC_AVUP KC_VOLU
 #define KC_BRDN KC_BRID
 #define KC_BRUP KC_BRIU
-#define KC_TRNS KC_TRNS
-#define KC_PGUP KC_PGUP
-#define KC_LSFT KC_LSFT
-#define KC_RSFT KC_RSFT
-#define KC_LCTL KC_LCTL
-#define KC_RCTL KC_RCTL
-#define KC_LALT KC_LALT
-#define KC_RALT KC_RALT
-#define KC_LGUI KC_LGUI
-#define KC_RGUI KC_RGUI
 #define KC_SPCE KC_SPACE
 #define KC_ESCP KC_ESCAPE
 #define KC_EQUL KC_EQUAL
-#define KC_ENTR KC_ENT
 #define KC_SLFT LGUI(KC_LEFT)
 #define KC_SRGT LGUI(KC_RIGHT)
 
@@ -51,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL ,KC_TRNS ,KC_TRNS ,KC_LALT ,KC_LGUI ,KC_TRNS ,
                                                                                  KC_TRNS ,KC_RGUI ,KC_RALT ,KC_TRNS ,KC_TRNS ,KC_RCTL ,
                                         KC_SPCE ,KC_TAB  ,MO(1)   ,
-                                                                        MO(2)   ,KC_ENTR ,KC_BSPC
+                                                                        MO(2)   ,KC_ENT  ,KC_BSPC
   ),
   [1] = LAYOUT_moonlander(
     KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,
