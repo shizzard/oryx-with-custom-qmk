@@ -5,7 +5,7 @@
 #define RGB_MATRIX_STARTUP_SPD 60
 
 // Unicode Configuration
-#define UNICODE_SELECTED_MODES UC_OSX  // Use macOS mode (hold Option/Alt and type hex)
+#define UNICODE_SELECTED_MODES UC_MAC  // Use macOS mode (hold Option/Alt and type hex)
 
 // RGB Matrix Reactive Effects Configuration
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_TYPING_HEATMAP
