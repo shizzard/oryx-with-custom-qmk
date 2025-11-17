@@ -10,5 +10,4 @@
 // RGB Matrix Reactive Effects Configuration
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_TYPING_HEATMAP_ANIM
 #define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY 25
-#define HSV_PURPLE 270, 255, 255  // Purple color for wave effects
 
