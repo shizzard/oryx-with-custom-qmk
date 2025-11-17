@@ -8,11 +8,9 @@
 #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS  // Use macOS mode (hold Option/Alt and type hex)
 
 // RGB Matrix Reactive Effects Configuration
-#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_TYPING_HEATMAP
-#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY 25
+#define RGB_MATRIX_DEFAULT_ON true
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_MULTISPLASH
 
-// Enable specific RGB matrix effects
-#define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+// Enable only multisplash effect (no other modes)
 #define ENABLE_RGB_MATRIX_MULTISPLASH
-#define ENABLE_RGB_MATRIX_SOLID_SPLASH
 
