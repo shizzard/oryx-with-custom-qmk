@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
-  rgb_matrix_mode_noeeprom(RGB_MATRIX_MULTISPLASH);  // Force multisplash mode
+  rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_REACTIVE_CROSS);  // Force multisplash mode
   rgb_matrix_set_speed(128);  // Set animation speed
 }
 
