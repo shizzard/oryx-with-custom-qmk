@@ -17,10 +17,10 @@ enum custom_keycodes {
 #define KC_DFN3 LT(15, KC_L)
 
 // Shortened keycode aliases (KC_xxxx format with exactly 4 symbols)
-#define KC_AVLD KC_AVLD
-#define KC_AVUP KC_AVUP
-#define KC_BRDN KC_BRDN
-#define KC_BRUP KC_BRUP
+#define KC_AVLD KC_VOLD
+#define KC_AVUP KC_VOLU
+#define KC_BRDN KC_BRID
+#define KC_BRUP KC_BRIU
 #define KC_TRNS KC_TRNS
 #define KC_PGUP KC_PGUP
 #define KC_LSFT KC_LSFT
@@ -34,7 +34,8 @@ enum custom_keycodes {
 #define KC_SPCE KC_SPACE
 #define KC_ESCP KC_ESCAPE
 #define KC_EQUL KC_EQUAL
-#define RC_SLFT LGUI(KC_LEFT)
+#define KC_ENTR KC_ENT
+#define KC_SLFT LGUI(KC_LEFT)
 #define KC_SRGT LGUI(KC_RIGHT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
