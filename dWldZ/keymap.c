@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                         KC_TRNS ,KC_RBRC ,KC_RPRN ,KC_UNDS ,KC_PERC ,KC_TRNS ,KC_TRNS ,
     KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_CIRC ,KC_LABK ,KC_BSLS ,
                                                                                  KC_SLASH,KC_RABK ,KC_DLR  ,KC_TRNS ,KC_TRNS ,KC_TRNS ,
-    KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,
+    KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,RGB_MOD ,
                                                                                  QK_BOOT ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,
                                         KC_TRNS ,KC_TRNS ,KC_TRNS ,
                                                                         KC_TRNS ,KC_TRNS ,KC_TRNS
