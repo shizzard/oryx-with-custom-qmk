@@ -14,13 +14,9 @@ enum {
   TD_LSFT_CAPS = 0,
 };
 
-// Tap Dance action: single tap = shift, double tap = caps lock toggle
-static const tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
 };
-
-// Alias for cleaner keymap
-#define TD_SFCL TD(TD_LSFT_CAPS)
 
 
 
@@ -39,6 +35,7 @@ static const tap_dance_action_t tap_dance_actions[] = {
 #define KC_EQUL KC_EQUAL
 #define KC_SLFT LGUI(KC_LEFT)
 #define KC_SRGT LGUI(KC_RIGHT)
+#define TD_SFCL TD(TD_LSFT_CAPS)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
