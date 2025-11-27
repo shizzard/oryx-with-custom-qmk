@@ -19,15 +19,13 @@ void dance_lsft_caps_finished(tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
     register_code(KC_LSFT);
   } else if (state->count == 2) {
-    register_code(KC_CAPS);
+    tap_code(KC_CAPS);  // Toggle caps lock with a quick tap
   }
 }
 
 void dance_lsft_caps_reset(tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
     unregister_code(KC_LSFT);
-  } else if (state->count == 2) {
-    unregister_code(KC_CAPS);
   }
 }
 
