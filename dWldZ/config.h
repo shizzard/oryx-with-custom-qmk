@@ -2,6 +2,9 @@
 #define SERIAL_NUMBER "dWldZ/B4RZNd"
 #define LAYER_STATE_8BIT
 
+// Tap Dance Configuration
+#define TAPPING_TERM 300  // Milliseconds to detect taps/holds
+
 // Unicode Configuration
 #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS  // Use macOS mode (hold Option/Alt and type hex)
 

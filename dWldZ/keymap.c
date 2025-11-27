@@ -14,8 +14,25 @@ enum {
   TD_LSFT_CAPS = 0,
 };
 
+// Tap Dance action: single tap = shift, double tap = caps lock toggle
+void dance_lsft_caps_finished(tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    register_code(KC_LSFT);
+  } else if (state->count == 2) {
+    register_code(KC_CAPS);
+  }
+}
+
+void dance_lsft_caps_reset(tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    unregister_code(KC_LSFT);
+  } else if (state->count == 2) {
+    unregister_code(KC_CAPS);
+  }
+}
+
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
+    [TD_LSFT_CAPS] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_lsft_caps_finished, dance_lsft_caps_reset),
 };
 
 
