@@ -15,7 +15,7 @@ enum {
 };
 
 // Tap Dance action: single tap = shift, double tap = caps lock toggle
-const tap_dance_action_t tap_dance_actions[] = {
+static const tap_dance_action_t tap_dance_actions[] = {
     [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
 };
 
