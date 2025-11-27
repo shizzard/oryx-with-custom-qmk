@@ -5,6 +5,9 @@
 // Tap Dance Configuration
 #define TAPPING_TERM 300  // Milliseconds to detect taps/holds
 
+// Caps Word Configuration - double tap shift to toggle caps word
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
 // Unicode Configuration
 #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS  // Use macOS mode (hold Option/Alt and type hex)
 
