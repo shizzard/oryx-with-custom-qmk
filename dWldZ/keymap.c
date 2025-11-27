@@ -9,6 +9,19 @@ enum custom_keycodes {
   RGB_SLD = ZSA_SAFE_RANGE,
 };
 
+// Tap Dance definitions
+enum {
+  TD_LSFT_CAPS = 0,
+};
+
+// Tap Dance action: single tap = shift, double tap = caps lock toggle
+const tap_dance_action_t tap_dance_actions[] = {
+    [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
+};
+
+// Alias for cleaner keymap
+#define TD_SFCL TD(TD_LSFT_CAPS)
+
 
 
 #define KC_DFN0 LT(7, KC_F7)
@@ -29,13 +42,13 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,KC_F5   ,KC_F6   ,KC_AVLD ,
-                                                                        KC_AVUP ,KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,
+    KC_TRNS ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_AVLD ,
+                                                                        KC_AVUP ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_10   ,KC_TRNS ,
     KC_ESCP ,KC_TRNS ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,KC_BRDN ,
                                                                         KC_BRUP ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_TRNS ,KC_TRNS ,
     KC_TAB  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,KC_HYPR ,
-                                                                        KC_TRNS ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_P    ,KC_ENT  ,
-    KC_LSFT ,KC_TRNS ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,
+                                                                        KC_HYPR ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_P    ,KC_ENT  ,
+    TD_SFCL ,KC_TRNS ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,
                                                                                  KC_N    ,KC_M    ,KC_Q    ,KC_Z    ,KC_TRNS ,KC_RSFT ,
     KC_LCTL ,KC_TRNS ,KC_TRNS ,KC_LALT ,KC_LGUI ,KC_TRNS ,
                                                                                  KC_TRNS ,KC_RGUI ,KC_RALT ,KC_TRNS ,KC_TRNS ,KC_RCTL ,
@@ -43,8 +56,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                         KC_TRNS ,MO(2)   ,KC_BSPC
   ),
   [1] = LAYOUT_moonlander(
-    KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,
-                                                                        KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,KC_TRNS ,
+    KC_F1   ,KC_F2   ,KC_F3   ,KC_F4   ,KC_F5   ,KC_F6   ,KC_TRNS ,
+                                                                        KC_TRNS ,KC_F7   ,KC_F8   ,KC_F9   ,KC_F10  ,KC_F11  ,KC_F12  ,
     KC_TRNS ,KC_TRNS ,KC_SCLN ,KC_QUES ,KC_EXLM ,KC_DQUO ,KC_TRNS ,
                                                                         KC_TRNS ,KC_TRNS ,KC_SLFT ,KC_DFN0 ,KC_SRGT ,KC_TRNS ,KC_TRNS ,
     KC_TRNS ,KC_TRNS ,KC_COLN ,KC_COMMA,KC_DOT  ,KC_EQUL ,KC_TRNS ,
